@@ -39,9 +39,8 @@ def decide ():
             if snake.id == "2fd899c5-b1cc-41ae-a4c4-782a9fe168a6" :
                 break
         
-        
-        mysnake = snake
-        head = snake.coords[0]
+     
+        head =  snake.coords[0]
         headx = head[0]
         heady = head[1]
         
@@ -72,7 +71,7 @@ def move():
    
 
     return {
-        'move': decide(),
+        'move':   "north",
         'taunt': 'battlesnake-python!'
     }
 
