@@ -1,0 +1,6 @@
+git status
+git add.
+git status
+git commit -m "version1"
+git push
+git psuh heroku master

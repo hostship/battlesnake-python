@@ -32,13 +32,47 @@ def start():
 
 
 @bottle.post('/move')
+
+def decide ():
+        # where is head and where is food
+        for snake in snakes:
+            if snake.id == "2fd899c5-b1cc-41ae-a4c4-782a9fe168a6" :
+                break
+        
+        
+        mysnake = snake
+        head = snake.coords[0]
+        headx = head[0]
+        heady = head[1]
+        
+        firstfood = food[0]
+        foodx = firstfood[0]
+        foody = firstfood[1]
+        
+        if  heady != foody  :
+                if  heady > foody :
+                    return "north"
+                if  heady < foody :
+                    return "south"
+                
+        
+        
+        if headx > foodx :
+            return "west" 
+        if  headx < foodx :
+            return "east"
+        
+
+            
+    
+
 def move():
     data = bottle.request.json
 
-    # TODO: Do things with data
+   
 
     return {
-        'move': 'north',
+        'move': decide(),
         'taunt': 'battlesnake-python!'
     }
 
